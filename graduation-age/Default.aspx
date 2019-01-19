@@ -5,11 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Graduation Age</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" />
+    <link href="/Content/Css/Site.css" rel="stylesheet"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h2>The time is now: <asp:label runat="server" id="TimeLabel" /></h2>
+        <h1>Age at Graduation Calculator</h1>
+
+        <div class="image">
+            <img src="/Content/images/graduationPhoto.jpg"/>
+        </div>
+
+        <div class="formBackground">
+            <p>The time is now: <asp:label runat="server" id="TimeLabel" /></p>
         
             <asp:Label runat="server" Text="Birth Day" />
             <asp:TextBox ID="birthDay" runat="server" Placeholder="28"></asp:TextBox>
@@ -29,10 +37,14 @@
             <asp:Label runat="server" Text="Graduation Year" />
             <asp:TextBox ID="gradYear" runat="server" Placeholder="2020"></asp:TextBox>
 
-            <h2><asp:Label runat="server" id="Age" Text="" /></h2>
+            <p><asp:Label runat="server" id="Age" Text="" /></p>
 
             <asp:Button ID="submit" runat="server" OnClick="CalculateAge" Text="Submit"></asp:Button>
         </div>
+
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - Conner Verret</p>
+        </footer>
     </form>
 </body>
 </html>
